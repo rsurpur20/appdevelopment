@@ -50,7 +50,7 @@ checking=[];
       $("h1").html("Error");
     }
   }
-  if (operations.includes("multiply")){
+  if (operations.slice(-1)[0]=="multiply"){
     console.log("multipliaCCCation");
     product=num1*num2;
     $("h1").html(product);
