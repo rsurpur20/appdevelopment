@@ -9,19 +9,22 @@ $(document).ready(function(){ //the end parenthesis and brackets are at the end 
 // THIS IS THE START OF THE JQUERY STUFF
 // /////////////////////////////////////////
 
+
+// variables
 var list=[];
 var nums_typed=[];
 display_num=Number($("#answers").text());
 operations=[];
 checking=[];//this checking list is to make sure that the first digit of the number isnt zero
-//with mutliplication and division, that goes first before the addition or subtraction--Pemdas
 everything_typed=[];
 
+
+// this function is to put everything that's been typed into a list
 $(".button").click(function() {
   everything_typed.push(this.id);
 });
 
-// this function keeps track of what was clicked and adds this value to the list
+// this function keeps track of what numbers were clicked and adds this value to the list,
 $(".numbers").click(function() {
   //make sure that the first digit of this number is non zero
   checking.push(this.id);
@@ -34,71 +37,63 @@ checking=[];
     }
 });
 
+// this is what happens when you hit the equal button
 $("#equal").click(function(){
 checking=[];
-  console.log(operations);
   display_num=Number($("#answers").text());
   nums_typed.push(display_num);
-  console.log(nums_typed);
   num2=nums_typed.pop();
   num1=nums_typed.pop();
-  // only do the following with the most recent operator
+
+// this is dependent on the most recent operator that was pressed
+
+// division
   if (operation_id=="divide"){
-    console.log("DIVISIIIIION");
-    console.log($("#answers").text());
     product=num1/num2;
     // checks if a number is divided by zero, and checks for Infinity or NaN
     if (isFinite(product)){
       $("h1").html(product);
       }
     else{
-      console.log("should print out errors");
       $("h1").html("Error");
     }
   }
-  if (operations.includes("multiply")){
-    console.log("multipliaCCCation");
+
+// multiplication
+  if (operation_id=="multiply"){
     product=num1*num2;
     $("h1").html(product);
-
   }
-  if (operations.includes("add")){
-    console.log("ASDDDDD");
+
+// addition
+  if (operation_id=="add"){
     product=num1+num2;
     $("h1").html(product);
   }
-  if (operations.includes("subtract")){
-    console.log("SUBTTRRACT");
+
+  // subtraction
+  if (operation_id=="subtract"){
     product=num1-num2;
     $("h1").html(product);
   }
-
-
-  list=[];
-  // operations=[];
+  list=[]; //empties the list of numbers typed in
 });
 
 $(".operator").click(function(){
-  operation_id=this.id;
+  operation_id=this.id; //keeps track of which operator to use
   checking=[];
-  // operations=[];
-  console.log(operations);
   display_num=Number($("#answers").text());
-  if (nums_typed.includes(display_num)){
-    // console.log("includes")
-  }
-  else{
+  checking_var=nums_typed.includes(display_num);
+  // checking if the number that is displayed in the list of numbers to do operations on
+  if (checking_var==false){
     nums_typed.push(display_num);
-    console.log(nums_typed);
     list=[];
-    operations.push(this.id);
   }
-  // console.log(operations);
 });
 
 
 
-
+// clear function
 $("#AC").click(function(){
   list=['0'];
   nums_typed=[];
@@ -106,27 +101,27 @@ $("#AC").click(function(){
   list.length=0;
 });
 
+// switching between positive and negative signs
 $("#sign_switch").click(function(){
   display_num=Number($("#answers").text())*-1;
-  console.log("skrrt"+display_num);
   $("h1").html(display_num);
 });
 
+// percent button
 $("#percent").click(function(){
   display_num=Number($("#answers").text())/100;
-  console.log("skrrt"+display_num);
   $("h1").html(display_num);
 });
-$("#period").click(function(){
 
-if (list.includes(".")){
-}
-else{
+
+// decimal function
+$("#period").click(function(){
+//making sure there is only one decimal point in each number
+decimal_checking=list.includes(".");
+if (decimal_checking==false){
   list.push(".");
   $("h1").html(list);
-
 }
-
 });
 
 
