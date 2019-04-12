@@ -15,6 +15,11 @@ display_num=Number($("#answers").text());
 operations=[];
 checking=[];//this checking list is to make sure that the first digit of the number isnt zero
 //with mutliplication and division, that goes first before the addition or subtraction--Pemdas
+everything_typed=[];
+
+$(".button").click(function() {
+  everything_typed.push(this.id);
+});
 
 // this function keeps track of what was clicked and adds this value to the list
 $(".numbers").click(function() {
@@ -37,7 +42,8 @@ checking=[];
   console.log(nums_typed);
   num2=nums_typed.pop();
   num1=nums_typed.pop();
-  if (operations.slice(-1)[0]=="divide"){
+  // only do the following with the most recent operator
+  if (operation_id=="divide"){
     console.log("DIVISIIIIION");
     console.log($("#answers").text());
     product=num1/num2;
@@ -50,7 +56,7 @@ checking=[];
       $("h1").html("Error");
     }
   }
-  if (operations.slice(-1)[0]=="multiply"){
+  if (operations.includes("multiply")){
     console.log("multipliaCCCation");
     product=num1*num2;
     $("h1").html(product);
@@ -73,6 +79,7 @@ checking=[];
 });
 
 $(".operator").click(function(){
+  operation_id=this.id;
   checking=[];
   // operations=[];
   console.log(operations);
