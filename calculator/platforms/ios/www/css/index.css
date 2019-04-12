@@ -1,0 +1,122 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:black;
+    /* background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif; */
+
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    text-transform:uppercase;
+    width:100%;
+    margin-bottom: 0px;
+
+}
+header{
+  background-color: black;
+  padding-bottom: 20%;
+  overflow: hidden;
+}
+#answers{
+  /* background-color: black; */
+  display:block;
+  padding-left: 80%;
+  font-size: 110px;
+  margin: 0px;
+  color: #FFF8F7;
+  font-family: "Helvetica";
+  font-weight: 100;
+  /* float:right;/ */
+}
+.button{
+  overflow: hidden;
+border-radius:100%;
+height:80px;
+width:80px;
+font-size: 35px;
+margin-left: 1%;
+margin-right: 1%;
+/* font-size: 24px; */
+}
+.row{
+  display:block;
+  /* margin: 0 auto; */
+  margin-top: 5px;
+  margin-left: 2%;
+  margin-bottom: 10px;
+width: 100%;
+}
+.orange{
+  background-color: #FF9500;
+  border-color: #FF9500;
+}
+
+.gray{
+  background-color: #D4D4D2;
+  border-color: #D4D4D2;
+}
+
+.black{
+  background-color: #505050;
+  border-color: #505050;
+}
+
+.black_text{
+  color:#505050;
+}
+
+.gray_text{
+  color:#D4D4D2;
+}
+
+.white_text{
+  color:white;
+}
+
+.zero{
+  width:170px;
+  height:80px;
+  border-radius:40px;
+  /* float:left; */
+}
+
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}

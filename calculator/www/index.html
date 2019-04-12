@@ -1,0 +1,63 @@
+h<!-- Roshni Surpur
+April 2, 2019
+Goal: Create a replica of the iPhone calculator
+Sources:
+https://www.schemecolor.com/apple-calculator-app-icon-2017-colors.php
+https://www.w3schools.com/css/css3_buttons.asp
+On my honor, I have neither given nor received unauthorized aid.
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+      <header>
+      </header>
+
+        <h1 id="answers">0</h1>
+
+      <div class="row">
+        <button id="AC"class="button gray black_text">AC</button>
+        <button id="sign_switch"class="button gray black_text">+/-</button>
+        <button id="percent"class="button gray black_text">%</button>
+        <button id="divide"class="button orange white_text operator">÷</button>
+      </div>
+      <div class="row">
+        <button id="7"class="button black white_text numbers">7</button>
+        <button id="8"class="button black white_text numbers">8</button>
+        <button id="9"class="button black white_text numbers">9</button>
+        <button id="multiply"class="button orange white_text operator">×</button>
+
+      </div>
+      <div class="row">
+        <button id="4"class="button black white_text numbers">4</button>
+        <button id="5"class="button black white_text numbers">5</button>
+        <button id="6"class="button black white_text numbers">6</button>
+        <button id="subtract"class="button orange white_text operator">-</button>
+      </div>
+      <div class="row">
+        <button id="1"class="button black white_text numbers">1</button>
+        <button id="2"class="button black white_text numbers">2</button>
+        <button id="3"class="button black white_text numbers">3</button>
+        <button id="add"class="button orange white_text operator">+</button>
+      </div>
+      <div class="row">
+        <button id="0"class="button zero black white_text numbers">0</button>
+        <button id="period"class="button black white_text">.</button>
+        <button id="equal"class="button orange white_text">=</button>
+      </div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
