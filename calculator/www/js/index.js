@@ -1,9 +1,3 @@
-// things that i need to check:
-// make sure that the first digit of any number isn't 0
-// make sure that if the user puts in a multiplication sign and then a divison, then it should divide
-// the user can only put in one decimal point
-//
-
 $(document).ready(function(){ //the end parenthesis and brackets are at the end of this document
 // /////////////////////////////////////////
 // THIS IS THE START OF THE JQUERY STUFF
@@ -18,7 +12,6 @@ operations=[];
 checking=[];//this checking list is to make sure that the first digit of the number isnt zero
 everything_typed=[];
 
-
 // this function is to put everything that's been typed into a list
 $(".button").click(function() {
   everything_typed.push(this.id);
@@ -27,14 +20,14 @@ $(".button").click(function() {
 // this function keeps track of what numbers were clicked and adds this value to the list,
 $(".numbers").click(function() {
   //make sure that the first digit of this number is non zero
-  checking.push(this.id);
-  if (Math.sign(checking[0])==1 || Math.sign(checking[0])==-1){
-    list.push(this.id);
-    $("h1").html(list);
-    }
-    else{
-checking=[];
-    }
+//   checking.push(this.id);
+//   if (Math.sign(checking[0])==1 || Math.sign(checking[0])==-1){
+//     list.push(this.id);
+//     $("h1").html(list);
+//     }
+//     else{
+// checking=[];
+//     }
 });
 
 // this is what happens when you hit the equal button
