@@ -19,16 +19,10 @@ $(".button").click(function() {
 
 // this function keeps track of what numbers were clicked and adds this value to the list,
 $(".numbers").click(function() {
-  //make sure that the first digit of this number is non zero
-//   checking.push(this.id);
-//   if (Math.sign(checking[0])==1 || Math.sign(checking[0])==-1){
-//     list.push(this.id);
-//     $("h1").html(list);
-//     }
-//     else{
-// checking=[];
-//     }
+    list.push(this.id);
+    $("h1").html(list);
 });
+
 
 // this is what happens when you hit the equal button
 $("#equal").click(function(){
