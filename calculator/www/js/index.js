@@ -20,7 +20,7 @@ $(".button").click(function() {
 // this function keeps track of what numbers were clicked and adds this value to the list,
 $(".numbers").click(function() {
     list.push(this.id);
-    $("h1").html(list);
+      $("h1").html(list);
 });
 
 
