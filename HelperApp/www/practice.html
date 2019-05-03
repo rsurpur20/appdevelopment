@@ -1,0 +1,26 @@
+var executeQuery= "INSERT INTO Payment_Summary (Type_of_Purchase,	Amount_Purchased,	Date) VALUES ('School Store', 5.67, 4/27/19)"
+transaction.executeSql(executeQuery, [Type_of_Purchase,	Amount_Purchased,	Date]
+  , function(tx, result) {
+alert('Inserted');
+},
+function(error){
+alert('Error occurred');
+});
+});
+
+
+//the star means everything, you can replace the star with the colomn name of the data you want
+//SELECT Type_of_Purchase WHERE Date= 2019
+//SELECT Type_of_Purchase OREDER BY Date ASC
+//that orders the information in Ascending order
+//you can put LIMIT 3 at the end to show only 3 results
+//
+myDB.transaction(function(transaction) {
+transaction.executeSql('SELECT * FROM Payment_Summary', [], function (tx, results) {
+var len = results.rows.length, i;
+$("#rowCount").append(len);
+for (i = 0; i < len; i++){
+$("#TableData").append("<tr><td>"+results.rows.item(i).id+"</td><td>"+results.rows.item(i).title+"</td><td>"+results.rows.item(i).desc+"</td></tr>");
+}
+}, null);
+});

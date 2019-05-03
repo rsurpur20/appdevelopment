@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Helper App</title>
+  </head>
+  <body>
+    <form class="spending_form" action="index.html" method="post" onsubmit="spentFunction()">
+      <h1 class="spent_money_text">How much did you spend?</h1>
+      <p class="input_amount">$</p>
+      <input class="input_amount" id="spent_input" type="text" name="" value="">
+      <h1 class="spent_money_text">Where?</h1>
+<div class="spending_form_buttons">
+      <input type="radio" id="tuck_shop" name="radio"/>
+      <label for="tuck_shop">Tuck Shop</label>
+    </div>
+      <div class="spending_form_buttons">
+      <input type="radio" id="school_store" name="radio"/>
+      <label for="school_store">School Store</label>
+    </div>
+      <div class="spending_form_buttons">
+      <input type="radio" id="in-town" name="radio"/>
+      <label for="in-town">In town</label>
+    </div>
+      <div class="spending_form_buttons">
+      <input type="radio" id="ordering_out" name="radio"/>
+      <label for="ordering_out">Ordering Out</label>
+    </div>
+    <a class= "back_submit_button" href="money_tracker.html">Back</a>
+    <input class= "back_submit_button" type="submit">
+
+      <!-- <label >Tuck Shop
+        <input class="spending_form_buttons" type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label>School Store
+        <input class="spending_form_buttons" type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label>In-town
+        <input class="spending_form_buttons" type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label>Ordering Out
+        <input class="spending_form_buttons" type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label> -->
+      <!-- <input class="spending_form_buttons" type="radio" name="" value="">Tuck Shop <br>
+      <input class="spending_form_buttons" type="radio" name="" value="">School Store <br>
+      <input class="spending_form_buttons" type="radio" name="" value="">In-Town <br>
+      <input class="spending_form_buttons" type="radio" name="" value="">Ordering Out <br> -->
+
+    </form>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
